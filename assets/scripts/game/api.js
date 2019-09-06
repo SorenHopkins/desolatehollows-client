@@ -15,13 +15,14 @@ const inventoryPost = function (name, description, adjective) {
         adjective: adjective
       }
     }
+    // inventoryIndex()
     // if key and value are the same can leave : out
   })
 }
 
 const inventoryIndex = function () {
   return $.ajax({
-    url: config.apiUrl + '/games/' + store.user.id,
+    url: config.apiUrl + '/inventories',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
