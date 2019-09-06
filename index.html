@@ -12,6 +12,109 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign-in/Sign-up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="messageBody" class="modal-body">
+              <div class="alert alert-warning collapse loginAlert" role="alert" id="signUpFailure">
+                <span>
+                <p>Please check that your passwords match!</p>
+                </span>
+              </div>
+              <div class="alert alert-warning collapse loginAlert" role="alert" id="signInFailure">
+                <span>
+                <p>Login failed!</p>
+                </span>
+              </div>
+              <div class="alert alert-warning collapse loginAlert" role="alert" id="signUpSuccessAlert">
+                <span>
+                <p>Successfully signed up!</p>
+                </span>
+              </div>
+              <div id="loginpage" class="container">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>Wait!</strong> This is a toy application. Please do not use real passwords or emails!
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form id='sign-up' class='border sign reset'>
+                  <fieldset>
+                    <legend>Sign up!</legend>
+                    <input type="text" name="credentials[email]" placeholder="Email" class="reset">
+                    <input type="password" name="credentials[password]" placeholder="Password" class="reset">
+                    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" class="reset">
+                    <input type="submit" value="Sign up!" class="btn btn-primary">
+                  </fieldset>
+                </form>
+                <form id='sign-in' class='border sign reset'>
+                  <fieldset class='signin'>
+                    <legend>Sign in!</legend>
+                    <div>
+                      <input type="text" name="credentials[email]" placeholder="Email" class="reset">
+                      <input type="password" name="credentials[password]" placeholder="Password" class="reset">
+                    </div>
+                    <input type="submit" value="Sign in!" class="btn btn-primary">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div id='main'>
+          <div id='buttonzone' class="container">
+            <div class="inventory">
+              <div class="form-group">
+                <label for="inventory">Inventory</label>
+                <select multiple class="form-control inventoryBox" id="exampleFormControlSelect2">
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div data-id="1" class="col-4 box">
+                <button id="batWings" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Bat Wings
+                </button>
+              </div>
+              <div data-id="2" class="col-4 box">
+                <button id="honeyDrop" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Drop of Honey
+                </button>
+              </div>
+              <div data-id="3" class="col-4 box">
+                <button id="eyeOfNewt" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Eye of Newt
+                </button>
+              </div>
+              <div data-id="4" class="col-4 box">
+                <button id="frogLegs" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Frog Legs
+                </button>
+              </div>
+              <div data-id="5" class="col-4 box">
+                <button id="nightshade" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Nightshade
+                </button>
+              </div>
+              <div data-id="5" class="col-4 box">
+                <button id="snakeTogues" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Snake's Tongue
+                </button>
+              </div>
+              <div data-id="6" class="col-4 box">
+                <button id="holyWater" type="button" class="btn btn-primary btn-sm ingredientButton">
+                  Holy Water
+                </button>
+              </div>
+          </div>
+        </div>
     </body>
 </html>
