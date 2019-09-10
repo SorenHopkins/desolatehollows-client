@@ -51,6 +51,25 @@ const deleteIngredient = function (currentIngredient) {
   })
 }
 
+const updateIngredient = function (name, description, adjective) {
+  return $.ajax({
+    url: config.apiUrl + '/inventories/' + store.updateId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      inventory: {
+        name: name,
+        description: description,
+        adjective: adjective
+      }
+    }
+    // inventoryIndex()
+    // if key and value are the same can leave : out
+  })
+}
+
 const brewNewPotion = function () {
   // store.currentPotion = ''
   // inventoryIndex()
@@ -95,5 +114,6 @@ module.exports = {
   inventoryIndex,
   brewNewPotion,
   showIngredient,
-  deleteIngredient
+  deleteIngredient,
+  updateIngredient
 }

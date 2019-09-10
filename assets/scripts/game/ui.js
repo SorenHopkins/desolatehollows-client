@@ -9,11 +9,12 @@ const inventoryPostSuccess = (data) => {
 
 const inventoryBrewSuccess = () => {
   $('.inventoryBox').trigger('reset')
-  $('.potionArea').html("You have brewed a " + store.currentPotion + " Potion!")
+  const upperPotion = store.currentPotion.charAt(0).toUpperCase() + store.currentPotion.substring(1)
+  $('.potionArea').html('You have brewed a ' + upperPotion + ' Potion!')
 }
 
 const failure = (data) => {
-  console.log(data)
+  console.log('We experienced an error', data)
 }
 
 module.exports = {

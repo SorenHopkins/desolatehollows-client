@@ -12,6 +12,29 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Information</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="messageBody" class="modal-body">
+              <form id='ingredientUpdater' class='border sign reset'>
+                <fieldset>
+                  <legend>Create your own ingredient</legend>
+                  <input type="text" name="credentials[name]" placeholder="Name" class="reset">
+                  <input type="text" name="credentials[description]" placeholder="Description" class="reset">
+                  <input type="text" name="credentials[adjective]" placeholder="Adjective" class="reset">
+                  <input id='updateButton' type="submit" value="Update!" class="btn btn-primary updateIngredient">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -120,6 +143,16 @@
           <button id="brewPotion" type="button" class="btn btn-primary btn-sm brewButton">
             Brew Potion
           </button>
+          <br>
+          <form id='ingredientMaker' class='border sign reset'>
+            <fieldset>
+              <legend>Create your own ingredient</legend>
+              <input type="text" name="credentials[name]" placeholder="Name" class="reset">
+              <input type="text" name="credentials[description]" placeholder="Description" class="reset">
+              <input type="text" name="credentials[adjective]" placeholder="Adjective" class="reset">
+              <input id='createNew' type="submit" value="Create!" class="btn btn-primary createIngredient">
+            </fieldset>
+          </form>
           <br>
           <div class= 'potionArea'></div>
         </div>
