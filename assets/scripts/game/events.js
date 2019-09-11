@@ -142,5 +142,6 @@ const gameEvents = function () {
 }
 
 module.exports = {
-  gameEvents
+  gameEvents,
+  inventoryRefresh
 }

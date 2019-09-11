@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Desolate Hollows</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,40 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Update Information</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div id="messageBody" class="modal-body">
-              <form id='ingredientUpdater' class='border sign reset'>
-                <fieldset>
-                  <legend>Create your own ingredient</legend>
-                  <input type="text" name="credentials[name]" placeholder="Name" class="reset">
-                  <input type="text" name="credentials[description]" placeholder="Description" class="reset">
-                  <input type="text" name="credentials[adjective]" placeholder="Adjective" class="reset">
-                  <input id='updateButton' type="submit" value="Update!" class="btn btn-dark updateIngredient">
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Sign-in/Sign-up</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div id="messageBody" class="modal-body">
-              <div class="alert alert-warning collapse loginAlert" role="alert" id="signUpFailure">
+              <!-- <div class="alert alert-warning collapse loginAlert" role="alert" id="signUpFailure">
                 <span>
                 <p>Please check that your passwords match!</p>
                 </span>
@@ -59,6 +33,8 @@
                 <span>
                 <p>Successfully signed up!</p>
                 </span>
+              </div> -->
+              <div class="loginAlert">
               </div>
               <div id="loginpage" class="container">
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -90,52 +66,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="sidebar">
-        <nav class="sidebar-nav">
-          <ul class="nav">
-            <li class="nav-title">Nav Title</li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon cui-speedometer"></i> Nav item
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon cui-speedometer"></i> With badge
-                <span class="badge badge-primary">NEW</span>
-              </a>
-            </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon cui-puzzle"></i> Nav dropdown
-              </a>
-              <ul class="nav-dropdown-items">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="nav-icon cui-puzzle"></i> Nav dropdown item
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="nav-icon cui-puzzle"></i> Nav dropdown item
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item mt-auto">
-              <a class="nav-link nav-link-secondary">
-                <i class="nav-icon cui-cloud-download"></i> Change Password</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-dark">
-                <i class="nav-icon cui-layers"></i> Sign
-                <strong>Out</strong>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
       </div>
         <div id='main'>
           <div id='buttonzone' class="container">
@@ -204,6 +134,23 @@
           <br>
           <div class= 'potionArea whiteText'></div>
           <div class= 'potionDescriptionArea whiteText'></div>
-        </div>
+          <br>
+          <div class="btn-group">
+            <form id='change-pw' class="px-4 py-3 reset">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1" class="whiteText">Old Password</label>
+                <input type="password" name="passwords[old]" placeholder="Old Password" class="reset">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword1" class="whiteText">New Password</label>
+                <input type="password" name="passwords[new]" placeholder="New Password" class="reset">
+              </div>
+              <input type="submit" value="Change PW!" class="btn btn-secondary btn-sm">
+            </form>
+          </div>
+          <button id="signout" type="button" class="btn btn-dark btn-sm whiteText">
+            Sign out
+          </button>
+          <div class="alertArea"></div>
     </body>
 </html>
