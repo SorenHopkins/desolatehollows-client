@@ -12,6 +12,25 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign-in/Sign-up</h5>
+            </div>
+            <div class="updateAlert"> </div>
+            <form id='ingredientUpdater' class='border sign reset'>
+              <fieldset>
+                <legend>Sign up!</legend>
+                <input type="text" name="credentials[name]" placeholder="Name" class="reset">
+                <input type="text" name="credentials[description]" placeholder="Description" class="reset">
+                <input type="text" name="credentials[adjective]" placeholder="Adjective" class="reset">
+                <input type="submit" value="Create!" class="btn btn-dark">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">

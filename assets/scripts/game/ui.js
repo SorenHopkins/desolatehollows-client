@@ -9,9 +9,7 @@ const inventoryPostSuccess = (data) => {
 
 const inventoryBrewSuccess = () => {
   const upperPotion = store.currentPotion.charAt(0).toUpperCase() + store.currentPotion.substring(1)
-  console.log('hi inventoryBox')
   $('.inventoryBox').html(' ')
-  console.log('bye inventoryBox')
   $('.potionArea').html('You have brewed a ' + upperPotion + ' Potion!')
   const randColorIndex = Math.floor(Math.random() * potionColors.length)
   const randEffectsIndex = Math.floor(Math.random() * potionEffects.length)

@@ -102,6 +102,7 @@ const updateLaunch = event => {
 const updateIngredient = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
+  $('#updateModal').modal('hide')
 
   api.updateIngredient(data.credentials.name, data.credentials.description, data.credentials.adjective)
     .then((responseData) => {
