@@ -85,11 +85,10 @@ const brewPotion = event => {
         store.currentInventory.forEach(function (item) {
           store.currentPotion = store.currentPotion + item.adjective
           api.deleteIngredient(item.id)
-            .then()
+            .then(ui.inventoryBrewSuccess)
             .catch(ui.failure)
         }
         )
-        ui.inventoryBrewSuccess()
       }
     })
     .catch(ui.failure)

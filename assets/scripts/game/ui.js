@@ -8,8 +8,10 @@ const inventoryPostSuccess = (data) => {
 }
 
 const inventoryBrewSuccess = () => {
-  $('.inventoryBox').trigger('reset')
   const upperPotion = store.currentPotion.charAt(0).toUpperCase() + store.currentPotion.substring(1)
+  console.log('hi inventoryBox')
+  $('.inventoryBox').html(' ')
+  console.log('bye inventoryBox')
   $('.potionArea').html('You have brewed a ' + upperPotion + ' Potion!')
   const randColorIndex = Math.floor(Math.random() * potionColors.length)
   const randEffectsIndex = Math.floor(Math.random() * potionEffects.length)
@@ -35,7 +37,7 @@ const potionColors = ['A clear potion with silvery bubbles.',
   'A dark green potion that hisses when opened.',
   'A light green potion that makes a humming noise.',
   'A dark blue potion that shudders when moved.',
-  'A purple potion with a small bright halo',
+  'A purple potion with a small bright halo.',
   'A violet potion that smells absolutely terrible.',
   'A light blue potion that smells like flowers.',
   'A black potion with little flowers inside.',
