@@ -9,7 +9,7 @@ const gameEvents = require('./game/events.js')
 
 $(() => {
   // your JS code goes here
-  $('#loginModal').modal('show')
+  $('#loginModal').modal({backdrop: 'static', keyboard: false})
   authEvents.authEvents()
   gameEvents.gameEvents()
 })
