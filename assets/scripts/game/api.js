@@ -70,49 +70,9 @@ const updateIngredient = function (name, description, adjective) {
   })
 }
 
-const brewNewPotion = function () {
-  // store.currentPotion = ''
-  // inventoryIndex()
-  //   .then(data => {
-  //     store.currentInventory = data.inventories
-  //     store.currentInventory.forEach(function (item) {
-  //       console.log(item)
-  //       store.currentPotion = store.currentPotion + item.adjective
-  //       api.deleteIngredient(item.id)
-  //       .then()
-  //       .catch(ui.failure)
-  //     })
-  //     ui.inventoryBrewSuccess()
-  //   })
-  //   .catch(console.error)
-  // store.currentInventory = []
-  // store.currentPotion = ''
-  // store.currentInventoryArray = JSON.parse(store.currentInventory)
-  // console.log(store.currentInventoryArray)
-  // Array.from(store.currentInventory).each(function (item) {
-  //   console.log(item)
-  //   store.currentPotion = store.currentPotion + item.adjective
-  //   deleteIngredient(item.id)
-  // })
-  // for (let i = 0; i < store.currentInventory.length; i++) {
-  //   store.getIngredient = showIngredient(i)
-  //   store.currentPotion = store.currentPotion + store.getIngredient.adjective
-  //   deleteIngredient(store.currentInventory[i].id)
-  // }
-  // loop over inventoryIndex
-  // return $.ajax({
-  //   url: config.apiUrl + '/inventories',
-  //   method: 'GET',
-  //   headers: {
-  //     Authorization: 'Token token=' + store.user.token
-  //   }
-  // })
-}
-
 module.exports = {
   inventoryPost,
   inventoryIndex,
-  brewNewPotion,
   showIngredient,
   deleteIngredient,
   updateIngredient

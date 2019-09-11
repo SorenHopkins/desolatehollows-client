@@ -3,7 +3,6 @@ const store = require('./../store.js')
 // const fs = require('fs')
 
 const inventoryPostSuccess = (data) => {
-  console.log(data)
   const showInventoryHtml = inventoryListing({ inventories: data.inventories })
   $('.inventoryBox').html(showInventoryHtml)
 }
@@ -17,8 +16,13 @@ const inventoryBrewSuccess = () => {
   $('.potionDescriptionArea').html(potionColors[randColorIndex] + ' ' + potionEffects[randEffectsIndex])
 }
 
-const failure = (data) => {
-  console.log('We experienced an error', data)
+const failure = () => {
+  newAlert('light', 'We have experienced an error', 2000)
+}
+
+const newAlert = (type, message, delay) => {
+  $('.alertArea').append(`<div class='alert alert-${type} no-select ml-2' role="alert">${message}</div>`)
+  $('.alert').delay(delay).fadeOut(2000)
 }
 
 const potionColors = ['A clear potion with silvery bubbles.',
