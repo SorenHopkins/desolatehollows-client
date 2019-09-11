@@ -3,6 +3,7 @@ const store = require('./../store.js')
 // const fs = require('fs')
 
 const inventoryPostSuccess = (data) => {
+  $('form').trigger('reset')
   const showInventoryHtml = inventoryListing({ inventories: data.inventories })
   $('.inventoryBox').html(showInventoryHtml)
 }
