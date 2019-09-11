@@ -1,4 +1,5 @@
 {{#each inventories as |inventory|}}
   {{log inventory}}
-  <option>{{inventory.name}}</option>
+  <option data-id="{{inventory.id}}" class="updateLauncher">{{inventory.name}}
+  </option>
 {{/each}}

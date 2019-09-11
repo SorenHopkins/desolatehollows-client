@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url('public/dark_wood/dark_wood.png');
+  background-size: cover;
+}
+
+.whiteText {
+  color: white;
+}
