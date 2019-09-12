@@ -60,12 +60,16 @@ const createNewIngredient = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
 
-  api.inventoryPost(data.credentials.name, data.credentials.description, data.credentials.adjective)
-    .then((responseData) => {
-      inventoryRefresh()
-    }
-    )
-    .catch(ui.failure)
+  if (data.credentials.name !== '' && data.credentials.description !== '' && data.credentials.adjective !== '') {
+    api.inventoryPost(data.credentials.name, data.credentials.description, data.credentials.adjective)
+      .then((responseData) => {
+        inventoryRefresh()
+      }
+      )
+      .catch(ui.failure)
+  } else {
+    ui.blankFields()
+  }
 }
 
 const inventoryRefresh = () => {
@@ -103,13 +107,16 @@ const updateIngredient = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   $('#updateModal').modal('hide')
-
-  api.updateIngredient(data.credentials.name, data.credentials.description, data.credentials.adjective)
-    .then((responseData) => {
-      inventoryRefresh()
-    }
-    )
-    .catch(ui.failure)
+  if (data.credentials.name !== '' && data.credentials.description !== '' && data.credentials.adjective !== '') {
+    api.updateIngredient(data.credentials.name, data.credentials.description, data.credentials.adjective)
+      .then((responseData) => {
+        inventoryRefresh()
+      }
+      )
+      .catch(ui.failure)
+  } else {
+    ui.blankFields()
+  }
 }
 
 const gameEvents = function () {

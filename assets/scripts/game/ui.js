@@ -21,6 +21,10 @@ const failure = () => {
   newAlert('light', 'We have experienced an error', 2000)
 }
 
+const blankFields = () => {
+  newAlert('light', 'You have left fields in this form blank', 2000)
+}
+
 const newAlert = (type, message, delay) => {
   $('.alertArea').append(`<div class='alert alert-${type} no-select ml-2' role="alert">${message}</div>`)
   $('.alert').delay(delay).fadeOut(2000)
@@ -70,5 +74,6 @@ const potionEffects = ['It summons Unicorns.',
 module.exports = {
   inventoryPostSuccess,
   inventoryBrewSuccess,
-  failure
+  failure,
+  blankFields
 }
