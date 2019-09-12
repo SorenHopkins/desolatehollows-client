@@ -107,6 +107,7 @@ const updateIngredient = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   $('#updateModal').modal('hide')
+  $('form').trigger('reset')
   if (data.credentials.name !== '' && data.credentials.description !== '' && data.credentials.adjective !== '') {
     api.updateIngredient(data.credentials.name, data.credentials.description, data.credentials.adjective)
       .then((responseData) => {
